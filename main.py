@@ -752,3 +752,7 @@ def main() -> None:
     except KeyboardInterrupt:
         print("Shutting down...")
         httpd.server_close()
+
+
+if __name__ == "__main__":
+    main()

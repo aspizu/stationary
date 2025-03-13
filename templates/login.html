@@ -1,0 +1,12 @@
+<!-- IF error -->
+<strong style="color: red;">Error: $error</strong>
+<!-- ENDIF -->
+<form method="POST">
+<label>Username<br>
+<input type="text" name="username" minlength="$USERNAME_MINLENGTH" maxlength="$USERNAME_MAXLENGTH" required pattern="$USERNAME_PATTERN">
+</label><br>
+<label>Password<br>
+<input type="password" name="password" minlength="$PASSWORD_MINLENGTH" required>
+</label><br>
+<button>Login</button>
+</form>

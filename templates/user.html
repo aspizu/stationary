@@ -1,0 +1,42 @@
+<!-- IF image -->
+<img src="$image" alt="$username's image">
+<!-- ENDIF -->
+<!-- IF link -->
+<p><a href="$link">$link</a></p>
+<!-- ENDIF -->
+<!-- IF bio -->
+$bio
+<br>
+<!-- ENDIF -->
+<!-- IF location -->
+$location
+<br>
+<!-- ENDIF -->
+$followers followers, $following following
+<!-- IF show_follow_btn -->
+<!-- IF is_following -->
+<a href="/unfollow/$username">Unfollow</a>
+<!-- ENDIF -->
+<!-- IF NOT is_following -->
+<a href="/follow/$username">Follow</a>
+<!-- ENDIF -->
+<!-- ENDIF --> 
+<!-- IF session -->
+<form method="POST">
+<label>Bio<br>
+<input type="text" name="bio" value="$bio">
+</label><br>
+<label>Location<br>
+<input type="text" name="location" value="$location">
+</label><br>
+<label>Image<br>
+<input type="url" name="image" value="$image">
+</label><br>
+<label>Link<br>
+<input type="url" name="link" value="$link">
+</label><br>
+<button>Update</button>
+</form>
+<!-- ENDIF -->
+<h3>Logs</h3>
+$logs

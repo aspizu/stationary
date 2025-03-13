@@ -1,0 +1,18 @@
+<p><a href="/$username">$username</a></p>
+<p>$content</p>
+<br>
+<form method="POST">
+<textarea type="text" name="content" placeholder="Reply?" minlength="$CONTENT_MINLENGTH" maxlength="$CONTENT_MAXLENGTH" required></textarea><br>
+<button>Reply</button>
+</form>
+$likedby
+<!-- IF session -->
+<!-- IF is_liked -->
+<p><a href="/unlike/$id">Thumbs-down</a></p>
+<!-- ENDIF -->
+<!-- IF NOT is_liked -->
+<p><a href="/like/$id">Thumbs-up</a></p>
+<!-- ENDIF -->
+<!-- ENDIF -->
+<h3>$replycount Replies</h3>
+$replies
